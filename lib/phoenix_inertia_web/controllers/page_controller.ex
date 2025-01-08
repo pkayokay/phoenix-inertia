@@ -6,4 +6,8 @@ defmodule PhoenixInertiaWeb.PageController do
     # so skip the default app layout.
     render(conn, :home, layout: false)
   end
+
+  def test(conn, _params) do
+    render(conn, :test)
+  end
 end

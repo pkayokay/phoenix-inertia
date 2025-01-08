@@ -18,6 +18,7 @@ defmodule PhoenixInertiaWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/test", PageController, :test
   end
 
   # Other scopes may use custom stacks.
