@@ -42,6 +42,9 @@ defmodule PhoenixInertiaWeb do
         formats: [:html, :json],
         layouts: [html: PhoenixInertiaWeb.Layouts]
 
+      # Inertia
+      import Inertia.Controller
+
       use Gettext, backend: PhoenixInertiaWeb.Gettext
 
       import Plug.Conn
@@ -70,6 +73,9 @@ defmodule PhoenixInertiaWeb do
   def html do
     quote do
       use Phoenix.Component
+
+      # Inertia
+      import Inertia.HTML
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
