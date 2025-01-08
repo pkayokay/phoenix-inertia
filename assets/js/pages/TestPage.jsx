@@ -1,9 +1,9 @@
 import React from "react";
 
-const ProfilePage = ({ text}) => {
+const ProfilePage = ({ text }) => {
   return (
     <div>
-      {text}
+      <h1 class="text-center text-2xl">{text}</h1>
     </div>
   );
 }

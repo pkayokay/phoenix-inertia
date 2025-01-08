@@ -35,7 +35,7 @@ config :phoenix_inertia, PhoenixInertia.Mailer, adapter: Swoosh.Adapters.Local
 config :esbuild,
   version: "0.21.5",
   phoenix_inertia: [
-    args: ~w(js/app.jsx --bundle --target=es2020 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
+    args: ~w(js/app.jsx js/dead_app.js --bundle --target=es2020 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]

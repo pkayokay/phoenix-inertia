@@ -20,7 +20,7 @@ defmodule PhoenixInertiaWeb.Router do
 
     get "/", PageController, :home
     get "/test", PageController, :test
-    get "/profile", ProfileController, :index
+    get "/react", TestController, :index
   end
 
   # Other scopes may use custom stacks.
