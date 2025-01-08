@@ -75,10 +75,11 @@ defmodule PhoenixInertia.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind phoenix_inertia", "esbuild phoenix_inertia"],
+      "assets.build": ["tailwind phoenix_inertia", "esbuild phoenix_inertia", "esbuild ssr"],
       "assets.deploy": [
         "tailwind phoenix_inertia --minify",
         "esbuild phoenix_inertia --minify",
+        "esbuild ssr",
         "phx.digest"
       ]
     ]

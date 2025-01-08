@@ -38,6 +38,11 @@ config :esbuild,
     args: ~w(js/app.jsx js/dead_app.js --bundle --target=es2020 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+  ],
+  ssr: [
+    args: ~w(js/ssr.jsx --bundle --platform=node --outdir=../priv --format=cjs),
+    cd: Path.expand("../assets", __DIR__),
+    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
 
 # Configure tailwind (the version is required)
@@ -88,7 +93,7 @@ config :inertia,
 
   # Enable server-side rendering for page responses (requires some additional setup,
   # see instructions below). Defaults to `false`.
-  ssr: false,
+  ssr: true,
 
   # Whether to raise an exception when server-side rendering fails (only applies
   # when SSR is enabled). Defaults to `true`.

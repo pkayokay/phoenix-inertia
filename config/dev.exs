@@ -26,6 +26,7 @@ config :phoenix_inertia, PhoenixInertiaWeb.Endpoint,
   secret_key_base: "ml3dtUrvLVmA4DFn2D/7gxYYKwV9BJJT19wwGa2eX1cJu1OQWlG5GfjCLzPjUBZ+",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:phoenix_inertia, ~w(--sourcemap=inline --watch)]},
+    ssr: {Esbuild, :install_and_run, [:ssr, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:phoenix_inertia, ~w(--watch)]}
   ]
 
