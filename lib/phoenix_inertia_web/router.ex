@@ -8,6 +8,7 @@ defmodule PhoenixInertiaWeb.Router do
     plug :put_root_layout, html: {PhoenixInertiaWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Inertia.Plug
   end
 
   pipeline :api do
@@ -19,6 +20,7 @@ defmodule PhoenixInertiaWeb.Router do
 
     get "/", PageController, :home
     get "/test", PageController, :test
+    get "/react", TestController, :index
   end
 
   # Other scopes may use custom stacks.

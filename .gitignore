@@ -35,3 +35,6 @@ phoenix_inertia-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Ignore SSR build
+/priv/ssr.js
+
